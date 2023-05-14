@@ -1,0 +1,247 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Instrument+Serif:ital@1&display=swap');
+  body{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Alkatra', cursive;
+    font-family: 'Instrument Serif', serif;
+    /* background-color: rgb(67, 64, 64); */
+    background: url(bg\ 1.jpg);
+    background-size: 100%;
+    color: rgb(255, 255, 255);
+    cursor:url("cursor.png"),auto;
+    /* cursor:url("cursor2.png"),pointer; */
+    
+  }
+  
+  .head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 93%;
+    padding: 10px 3%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 100;
+  }
+.logo{
+  
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+.navbar a {
+  display: inline-block;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+   font-weight: 500;
+   margin-left: 35px;
+   transition: 0.2s;
+   opacity: 0;
+   animation: slideTop .5s ease forwards;
+   animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover,
+.navbar a.active{
+  color: blue;
+}
+.btn {
+  
+  background: #63a9d7;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  align-items: center;
+  opacity: 0;
+   animation: slideTop 1s ease forwards;
+   box-shadow: 0 0 20px aqua;
+   animation-delay:2s;
+}
+
+.btn:hover {
+  background: aqua;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  
+}
+
+.shiv{
+
+  width: 50%;
+  position: relative;
+  left: 10px;
+  margin-left: 90px;
+  opacity: 0;
+   animation: slideZoomIn 1s ease forwards;
+   animation-delay:1s;
+
+  /* height: 50%; */
+}
+.home{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 10% 0;
+  margin: 0 0;
+}
+.home-contant{
+  max-width:600px ;
+
+}
+.home-contant h3 {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+   animation: slideBottom 1s ease forwards;
+   animation-delay:0.7s;
+
+}
+.home-contant h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+
+  opacity: 0;
+   animation: slideRight 1s ease forwards;
+   animation-delay:1s;
+
+}
+
+.home-contant h3:nth-of-type(2) {
+  margin-bottom: 30px;
+   animation: slideTop 1s ease forwards;
+   animation-delay:0.7s;
+
+}
+.home-contant h3 span {
+  color: #10c8fa;
+  
+}
+.home-contant h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  
+}
+.home-contant p {
+  font-size: 20px;
+  font-weight: 500;
+  
+  
+}
+.home-contant p {
+  font-size: 20px;
+  font-weight:300;
+  
+
+  opacity: 0;
+   animation: slideLeft 1s ease forwards;
+   animation-delay:1s;
+
+}
+/* .home-img{
+  max-width: 450px;
+
+} */
+.social a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid cyan;
+  border-radius: 50%;
+  font-size: 20px;
+  color: aqua;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+   animation: slideLeft 1s ease forwards;
+   animation-delay:calc(.2s*var(--i));
+
+}
+.social a:hover{
+  background-color: aqua;
+  color:rgb(17, 15, 15) ;
+  box-shadow: 0 0 20px aqua;
+}
+@keyframes slideRight{
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop{
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom{
+  0%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft{
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideZoomIn{
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+

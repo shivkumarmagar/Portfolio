@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Instrument+Serif:ital@1&display=swap');
+body{
+    background: url("https://media.istockphoto.com/id/1356554393/photo/businessman-holding-smile-icon-for-the-best-evaluation-customer-satisfaction-concept.jpg?s=612x612&w=0&k=20&c=HXPwCqokplAtW8p8U2B9qLX2swWO5sPyrrA5a02TKDg=");
+    font-family: 'Alkatra', cursive;
+    font-family: 'Instrument Serif', serif;;
+    background-size: 100%;
+    cursor:url("../cursor.png"),auto;
+}
+.head{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 93%;
+  padding: 10px 3%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  z-index: 100;
+}
+.logo{
+
+font-size: 25px;
+color: rgb(255, 255, 255);
+text-decoration: none;
+font-weight: 600;
+cursor: default;
+opacity: 0;
+animation: slideRight 1s ease forwards;
+}
+.navbar a {
+display: inline-block;
+font-size: 18px;
+color: rgb(255, 255, 255);
+text-decoration: none;
+ font-weight: 500;
+ margin-left: 35px;
+ transition: 0.2s;
+ opacity: 0;
+ animation: slideTop .5s ease forwards;
+ animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover,
+.navbar a.active{
+color: blue;
+}
+.service h1{
+    color: white;
+    font-size: 400%;
+    margin-top: 5%;
+    margin-left: 12%;
+    opacity: 0;
+   animation: slideBottom 1s ease forwards;
+   animation-delay:0.7s;
+}
+
+ul{
+    padding: 0;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 30%;
+    font-size: 300%;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+
+}
+footer{
+    margin-top: 10%;
+    display: flex;
+
+}
+footer a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: larger;
+}
+footer a:hover{
+    color: rgb(90, 115, 243);
+    text-decoration: none;
+}
+.c1, .c2, .c3, .c4, .c5{
+    opacity: 0;
+   animation: slideRight 1s ease forwards;
+   animation-delay:1s;
+
+
+}
+@keyframes slideBottom{
+    0%{
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+@keyframes slideRight{
+    0%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideRight{
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop{
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
